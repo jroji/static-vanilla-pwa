@@ -21,7 +21,7 @@ const _vinculateHTML = (routes, currentState) => {
     _updateLinks(links, routes);
 
     context.bindedHTML = shell;
-    Object.assign(window, context);
+    window.context = Object.assign({}, context);
 };
 
 const _importModule = (routes, currentState) => {
